@@ -1,0 +1,50 @@
+.otherCities {
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  border-top: 1px solid rgb(0, 0, 0, 0.2);
+  padding: 24px 36px;
+}
+
+.toggle {
+  outline: 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-weight: 300;
+}
+
+.container {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.header {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .otherCities {
+    padding: 0 48px;
+    border: 0;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .header {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+}
