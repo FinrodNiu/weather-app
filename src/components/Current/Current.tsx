@@ -7,13 +7,14 @@ import Temperature from '../Temperature';
 import VerticalDivider from '../VerticalDivider';
 import getWeather from '../../apis/getWeather';
 import { ICity } from '../../interfaces/city';
+import { IWeatherData } from '../../interfaces/weatherData';
 
 interface ICurrentProps {
 	city: ICity;
 }
 
 interface ICurrentState {
-	data: any;
+	data?: IWeatherData;
 	loading: boolean;
 }
 
@@ -22,7 +23,7 @@ class Current extends React.Component<ICurrentProps, ICurrentState> {
 		super(props);
 
 		this.state = {
-			data: null,
+			data: undefined,
 			loading: true,
 		}
 	}
@@ -67,23 +68,23 @@ class Current extends React.Component<ICurrentProps, ICurrentState> {
 					<React.Fragment>
 						<div className={styles.left}>
 							<div data-testid="TEMP" className={styles.temperature}>
-								<Temperature>{data.main.temp}</Temperature>
+								<Temperature>{data?.main.temp}</Temperature>
 							</div>
 							<div data-testid="WEATHER" className={styles.weather}>
-								<Text className={styles.weather}>{data.weather[0].main}</Text>
+								<Text className={styles.weather}>{data?.weather[0].main}</Text>
 							</div>
 							<div className={styles.metas}>
 								<div data-testid="HUMIDITY" className={styles.humidity}>
-									<Meta title="HUMIDITY" value={`${data.main.humidity}%`} />
+									<Meta title="HUMIDITY" value={`${data?.main.humidity}%`} />
 								</div>
 								<VerticalDivider width="2px" color="rgba(255, 255, 255, 0.7)" />
 								<div data-testid="WIND" className={styles.wind}>
-									<Meta title="WIND" value={`${data.wind.speed} K/M`} />
+									<Meta title="WIND" value={`${data?.wind.speed} K/M`} />
 								</div>
 							</div>
 						</div>
 						<div className={styles.right}>
-						<h1 data-testid="NAME" className={styles.city}>{data.name}</h1>
+						<h1 data-testid="NAME" className={styles.city}>{data?.name}</h1>
 						</div>
 					</React.Fragment>
 				)}

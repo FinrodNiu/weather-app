@@ -7,6 +7,7 @@ import setCity from '../../store/city/actions/setCity';
 import { connect } from 'react-redux';
 import { Action } from 'redux';
 import { ICity } from '../../interfaces/city';
+import { IWeatherData, IWeatherDataList } from '../../interfaces/weatherData';
 
 const cx = classNames.bind(styles);
 
@@ -39,7 +40,7 @@ interface ICurrentProps {
 }
 
 interface ICurrentState {
-	data: any;
+	data?: IWeatherDataList;
 	loading: boolean;
 	toggle: boolean;
 }
@@ -49,7 +50,7 @@ class OtherCities extends React.Component<ICurrentProps, ICurrentState> {
 		super(props);
 
 		this.state = {
-			data: null,
+			data: undefined,
 			loading: true,
 			toggle: false,
 		}
@@ -90,7 +91,7 @@ class OtherCities extends React.Component<ICurrentProps, ICurrentState> {
 						<div className={styles.loading}>Loading...</div>
 					) : (
 						<div className={styles.cities}>
-							{data.list.map((item: any) => {
+							{data?.list.map((item: IWeatherData) => {
 								if (item.id === currentCity.id) {
 									return null;
 								}
@@ -99,7 +100,7 @@ class OtherCities extends React.Component<ICurrentProps, ICurrentState> {
 									<City 
 										key={item.id}
 										name={item.name} 
-										temperature={parseInt(item.main.temp)}
+										temperature={item.main.temp}
 										weather={{ 
 											icon: item.weather[0].icon, 
 											description: item.weather[0].main,
