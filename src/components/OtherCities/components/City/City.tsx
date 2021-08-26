@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './City.module.css';
 import Temperature from '../../../Temperature';
+import { IWeatherDataWeather } from '../../../../interfaces/weatherData';
 
 interface ICityProps {
 	name: string,
-	weather: any,
+	weather: IWeatherDataWeather,
 	temperature: number,
 	onClick: React.MouseEventHandler,
 }

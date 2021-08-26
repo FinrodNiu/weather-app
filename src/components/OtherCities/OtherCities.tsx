@@ -101,10 +101,7 @@ class OtherCities extends React.Component<ICurrentProps, ICurrentState> {
 										key={item.id}
 										name={item.name} 
 										temperature={item.main.temp}
-										weather={{ 
-											icon: item.weather[0].icon, 
-											description: item.weather[0].main,
-										}} 
+										weather={item.weather[0]} 
 										onClick={() => onCityClick({
 											id: item.id,
 											name: item.name,
