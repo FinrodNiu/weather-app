@@ -12,7 +12,7 @@
 .name {
   font-weight: normal;
   margin-right: 0.5rem;
-  width: 20px;
+  width: 90px;
   letter-spacing: 1px;
   margin: 0;
   flex: 1;
@@ -32,5 +32,9 @@
   .city {
     font-size: 1.5rem;
     width: 30%;
+  }
+
+  .name {
+    width: 20px;
   }
 }
