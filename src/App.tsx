@@ -5,20 +5,20 @@ import OtherCities from './components/OtherCities';
 
 
 class App extends React.Component {
-  render() {
-    return (
-      <div className={styles.app}>
-        <div className={styles.weather}>
-          <div>
-            <Current />
-          </div>
-          <div className={styles.bottom}>
-            <OtherCities />
-          </div>
-        </div>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className={styles.app}>
+				<div className={styles.weather}>
+					<div>
+						<Current />
+					</div>
+					<div className={styles.bottom}>
+						<OtherCities />
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default App;

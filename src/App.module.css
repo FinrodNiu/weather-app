@@ -1,28 +1,28 @@
 .app {
-  min-height: 100vh;
-  background-image: url(https://wallpaperaccess.com/full/2629319.png);
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	min-height: 100vh;
+	background-image: url(https://wallpaperaccess.com/full/2629319.png);
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .weather {
-  margin: 60px;
-  background: white;
-  border-radius: 32px;
-  box-shadow: 0 0 16px rgb(0, 0, 0, 0.5);
+	margin: 60px;
+	background: white;
+	border-radius: 32px;
+	box-shadow: 0 0 16px rgb(0, 0, 0, 0.5);
 }
 
 .bottom {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 @media screen and (min-width: 1024px) {
-  .bottom {
-    flex-direction: row;
-    padding: 36px 0;
-  }
+	.bottom {
+		flex-direction: row;
+		padding: 36px 0;
+	}
 }

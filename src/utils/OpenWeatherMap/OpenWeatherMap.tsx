@@ -3,19 +3,19 @@ import axios, { AxiosRequestConfig } from 'axios';
 const baseURL = 'https://api.openweathermap.org/data/2.5';
 
 const OpenWeatherMap = axios.create({
-  baseURL,
+	baseURL,
 });
 
 const enrichRequestWithAppId = (config: AxiosRequestConfig) => {
-  config.params.appid = '8dac59d6516ccb7762f161db9e5fac84';
+	config.params.appid = '8dac59d6516ccb7762f161db9e5fac84';
 
-  return config;
+	return config;
 }
 
 const enrichRequestWithCelsiusUnits = (config: AxiosRequestConfig) => {
-  config.params.units = 'metric';
+	config.params.units = 'metric';
 
-  return config;
+	return config;
 };
 
 OpenWeatherMap.interceptors.request.use(enrichRequestWithAppId);

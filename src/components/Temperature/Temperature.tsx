@@ -1,16 +1,16 @@
 import React from 'react';
 
 interface ITemperatureProps {
-  children: React.ReactNode,
+	children: React.ReactNode,
 }
 const Temperature: React.FC<ITemperatureProps> = ({
-  children,
+	children,
 }) => (
-  <span>
-    {children}
-    <span>&nbsp;</span>
-    <span>&#176;</span>
-  </span>
+	<span>
+		{children}
+		<span>&nbsp;</span>
+		<span>&#176;</span>
+	</span>
 );
 
 export default Temperature

@@ -3,17 +3,17 @@ import classNames from 'classnames';
 import styles from './Text.module.css';
 
 interface ITextProps {
-  className: string;
-  children: any;
+	className: string,
+	children: any,
 }
 
 const Text: React.FC<ITextProps> = ({
-  className,
-  children,
+	className,
+	children,
 }) => (
-  <span className={classNames(styles.text, className)}>
-    {children}
-  </span>
+	<span className={classNames(styles.text, className)}>
+		{children}
+	</span>
 );
 
 export default Text
