@@ -21,6 +21,15 @@ export const CITIES = [{
 }, {
   name: 'Perth',
   id: '2063523',
+}, {  
+  name: 'Adelaide',
+  id: '1023656',
+}, {  
+  name: 'Hobart',
+  id: '2163355',
+}, {
+  name: 'Darwin',
+  id: '7839402',
 }];
 
 interface ICurrentProps {

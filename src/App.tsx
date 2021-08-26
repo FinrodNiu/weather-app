@@ -9,7 +9,7 @@ class App extends React.Component {
     return (
       <div className={styles.app}>
         <div className={styles.weather}>
-          <div className={styles.top}>
+          <div>
             <Current />
           </div>
           <div className={styles.bottom}>

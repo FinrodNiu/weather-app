@@ -17,19 +17,12 @@
 .bottom {
   display: flex;
   flex-direction: column;
-}
-
-.verticalDivider {
-  display: none;
+  justify-content: center;
 }
 
 @media screen and (min-width: 1024px) {
   .bottom {
     flex-direction: row;
     padding: 36px 0;
-  }
-
-  .verticalDivider {
-    display: block;
   }
 }

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import { SET_CITY } from './type';
 
 const DEFAULT_CITY = {
@@ -6,7 +5,7 @@ const DEFAULT_CITY = {
   id: 2158177,
 };
 
-export default (state = DEFAULT_CITY, action: any) => {
+const reducer = (state = DEFAULT_CITY, action: any) => {
   switch(action.type) {
     case SET_CITY:
       return action.city;
@@ -15,3 +14,5 @@ export default (state = DEFAULT_CITY, action: any) => {
       return state;
   };
 };
+
+export default reducer;

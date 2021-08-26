@@ -1,7 +1,8 @@
 import { SET_CITY } from '../../type';
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default (city: any) => ({
+const setCity = (city: any) => ({
   type: SET_CITY,
   city,
 });
+
+export default setCity;
